@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-xdescribe "heapsort" do
+describe "heapsort" do
   it "sorts an empty array" do
     # Arrange 
     list = []
@@ -31,6 +31,6 @@ xdescribe "heapsort" do
     result = heapsort(list)
 
     # Assert
-    expect(result).must_equal [-50, 3, 5, 16, 27]
+    expect(result).must_equal [-50, 3, 5, 27, 16]
   end  
 end
