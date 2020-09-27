@@ -1,24 +1,12 @@
 require_relative './min_heap'
 
 # This method uses a heap to sort an array.
-# Time Complexity:  ?
-# Space Complexity: ?
+# Time Complexity:  O(2n) -> O(n)
+# Space Complexity: O(2n) -> O(n)
 def heapsort(list)
-  print "list = "
-  p list 
-  puts "*****"
-
   minheap = MinHeap.new
-  list.each do |num|
-    minheap.add(num)
-  end
-  print "minheap = "
-  p minheap 
-  puts "*****"
-
+  list.each { |num| minheap.add(num) }
   sorted = []
-  list.length.times do 
-    sorted << minheap.remove
-  end
+  list.length.times { sorted << minheap.remove }
   sorted 
 end
